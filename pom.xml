@@ -9,10 +9,17 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
+<<<<<<< HEAD
     <artifactId>data_structure</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>data_structure</name>
     <description>Data Structure knowledge management project for Spring Boot</description>
+=======
+    <artifactId>datastructure_system</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>datastructure_system</name>
+    <description>Data Structure knowledge Management project for Spring Boot</description>
+>>>>>>> 18c93cb871300190a7a6d92c4de25952161c9e11
 
     <properties>
         <java.version>1.8</java.version>
@@ -54,7 +61,10 @@
                 </exclusion>
             </exclusions>
         </dependency>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 18c93cb871300190a7a6d92c4de25952161c9e11
     </dependencies>
 
     <build>
