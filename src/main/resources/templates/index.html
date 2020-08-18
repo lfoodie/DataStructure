@@ -45,6 +45,7 @@
                     <a th:href="@{/gotoknowledge}" target="mainbody">二叉树与树</a>
                     <a th:href="@{/gotoknowledge}" target="mainbody">图</a>
                     <a th:href="@{/gotoknowledge}" target="mainbody">查找与排序</a>
+
                 </div>
             </li>
         </ul>
@@ -59,8 +60,8 @@
                 <li style="margin-right:6px;float:right" class="welcome" th:utext="${msg3}"></li>
             </ul>
         </div>
-        <div class="main">
-            <iframe href="https://www.baidu.com" id="mainbody" name="mainbody" frameborder="1" scrolling="auto"></iframe>
+        <div class="main" th:include="index_cont::copy">
+            <iframe src="" id="mainbody" name="mainbody" frameborder="1" scrolling="auto">欢迎登录</iframe>
         </div>
     </div>
 </div>

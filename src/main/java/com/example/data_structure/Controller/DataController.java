@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -120,6 +121,13 @@ public class DataController {
             return "usermanage";
         }
     }
+    /*
+    @RequestMapping("/index_cont")
+    public ModelAndView firstpage(){
+        return new ModelAndView("index_cont");
+    }
 
+
+     */
 
 }
