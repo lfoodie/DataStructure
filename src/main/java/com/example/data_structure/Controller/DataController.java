@@ -31,7 +31,7 @@ public class DataController {
             map.put("msg3","welecom!"+username);
             return "index";
         }else {
-            map.put("msg1","username or password error,please input again!");
+            map.put("msg1","用户名或密码输入错误，请重新输入！");
             return "login";
         }
     }
@@ -45,7 +45,7 @@ public class DataController {
         user.setType("2");
         User user1 = userMapper.getuser(username);
         if(user1!=null){
-            map.put("msg2","the user has been used,please register again");
+            map.put("msg2","该用户名已被注册，请重新输入");
             return "register";
         }else {
             userMapper.adduser(user);
@@ -87,7 +87,7 @@ public class DataController {
         user.setType(type);
         User user3 = userMapper.getuser(username);
         if(user3!=null){
-            map.put("msg4","the user has been used,please register again.");
+            map.put("msg4","该用户名已存在，请重新输入.");
             return "usermanage";
         }else {
             userMapper.adduser(user);
@@ -105,7 +105,7 @@ public class DataController {
             //map.put("msg4","the user has been updated.");
             return "usermanage";
         }else {
-            map.put("msg5","the user is not a legal user");
+            map.put("msg5","用户不存在！");
             return "usermanage";
         }
     }
@@ -117,17 +117,9 @@ public class DataController {
             userMapper.deleteuser(username);
             return "usermanage";
         }else {
-            map.put("msg6","the user is not a legal user");
+            map.put("msg6","该用户不存在！");
             return "usermanage";
         }
     }
-    /*
-    @RequestMapping("/index_cont")
-    public ModelAndView firstpage(){
-        return new ModelAndView("index_cont");
-    }
-
-
-     */
 
 }

@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>用户登录</title>
-<<<<<<< HEAD
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--图标样式-->
     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
@@ -41,7 +40,7 @@
                         </span>
 
                 </div>
-                <h2 th:utext="${msg1}"></h2>
+                <h4 th:utext="${msg1}"></h4>
                 <div class="login100-form-radio">
                     <input type="checkbox" name="type" value="1"><label>&emsp;管理员</label>
                     <label>&emsp;</label>
@@ -67,24 +66,3 @@
 <script src="js/main.js"></script>
 </body>
 </html>
-=======
-</head>
-<body>
-<div>
-    <form action="/login" method="post">
-        <label for="">用户名：</label>
-        <input type="text" name="username" placeholder="用户名">
-        <label for="">密码</label>
-        <input type="password" name="password" placeholder="密码">
-        <input type="submit" value="登录">
-    </form>
-    <h2 th:utext="${msg1}"></h2>
-</div>
-<div>
-    <form action="/goreg" method="post">
-        <input type="submit" value="立即注册">
-    </form>
-</div>
-</body>
-</html>
->>>>>>> 18c93cb871300190a7a6d92c4de25952161c9e11
