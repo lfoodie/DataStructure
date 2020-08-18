@@ -4,6 +4,8 @@ import com.example.data_structure.model.User;
 import org.apache.ibatis.annotations.*;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
     @Select("select * from user where username=#{username} and password=#{password} and type=#{type}")
@@ -16,4 +18,8 @@ public interface UserMapper {
     void updateuser(String username,String password,String type);
     @Delete("delete from user where username=#{username}")
     void deleteuser(String username);
+    @Select("select count(*) from user")
+    int usercount();
+    @Select("select * from user limit n=#{n}-1,1")
+    User getauser(int n);
 }

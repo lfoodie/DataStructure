@@ -1,13 +1,15 @@
 package com.example.data_structure.Controller;
 
+
 import com.example.data_structure.mapper.UserMapper;
 import com.example.data_structure.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -69,6 +71,10 @@ public class DataController {
     public String gotoknowledge(HttpServletRequest request,Map<String,Object> map){
         return "knowledge";
     }
+    @RequestMapping("/gotoindex")
+    public String gotoindex(HttpServletRequest request,Map<String,Object> map){
+        return "index_cont";
+    }
     @RequestMapping("/adduser")
     public String adduser(HttpServletRequest request,Map<String,Object> map){
         String username = request.getParameter("username");
@@ -114,4 +120,6 @@ public class DataController {
             return "usermanage";
         }
     }
+
+
 }

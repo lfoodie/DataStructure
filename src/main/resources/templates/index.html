@@ -29,7 +29,8 @@
     <div class="left_menu">
         <ul id="nav_dot">
             <li>
-                <h4 class=“M7”><span></span>用户管理</h4>
+
+                <h4 class="M7"><span></span>用户管理</h4>
                 <div class="list-item none">
                     <a th:href="@{/gotouser}" target="mainbody">用户管理</a>
                 </div>
@@ -59,7 +60,7 @@
             </ul>
         </div>
         <div class="main">
-            <iframe href="index_content.html" id="mainbody" name="mainbody" frameborder="1" scrolling="auto"></iframe>
+            <iframe th:href="@{/gotoindex}" id="mainbody" name="mainbody" frameborder="1" scrolling="auto"></iframe>
         </div>
     </div>
 </div>

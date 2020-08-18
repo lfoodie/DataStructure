@@ -98,6 +98,12 @@
             <th>身份</th>
         </tr>
         </thead>
+        <tr th:each="i:${info}">
+            <td th:text="${i.id}"></td>
+            <td th:text="${i.username}"></td>
+            <td th:text="${i.password}"></td>
+            <td th:text="${i.type}"></td>
+        </tr>
         <tbody>
 
         </tbody>
