@@ -5,12 +5,9 @@ import com.example.data_structure.mapper.UserMapper;
 import com.example.data_structure.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 import java.util.Map;
 
 @Controller
@@ -21,6 +18,7 @@ public class DataController {
     public String reg(){
         return "login";
     }
+
     @RequestMapping("/login")
     public String login(HttpServletRequest request, Map<String,Object> map){
         String username = request.getParameter("username");
@@ -55,6 +53,10 @@ public class DataController {
     @RequestMapping("/goreg")
     public String goreg(HttpServletRequest request,Map<String,Object> map){
         return "register";
+    }
+    @RequestMapping("/goindex_cont")
+    public String goindex_cont(HttpServletRequest request,Map<String,Object> map){
+        return "index_cont";
     }
     @RequestMapping("/usermanage")
     public String userManage(HttpServletRequest request,Map<String,Object> map){

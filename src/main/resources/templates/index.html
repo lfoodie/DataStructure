@@ -60,18 +60,13 @@
                 <li style="margin-right:6px;float:right" class="welcome" th:utext="${msg3}"></li>
             </ul>
         </div>
-        <div class="main" th:include="index_cont::copy">
-            <iframe href="" id="mainbody" name="mainbody" frameborder="1" scrolling="auto">欢迎登录</iframe>
+        <div class="main">
+            <iframe  th:src="@{/index_cont}" id="mainbody" name="mainbody" frameborder="1" scrolling="auto"/>
         </div>
+
     </div>
 </div>
 <div id="footer"><p>数据结构知识点管理系统</p></div>
-<script>navList(12);</script>
-=======
-    <meta charset="UTF-8">
-    <title>主页</title>
-</head>
-<body>
-
-</body>
+<script>navList(12);
+</script>
 </html>
